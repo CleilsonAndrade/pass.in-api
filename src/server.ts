@@ -22,8 +22,8 @@ app.register(fastifySwagger, {
     consumes: ['application/json'],
     produces: ['application/json'],
     info: {
-      title: 'pass.in-api',
-      description: 'API specifications for the pass.in-api application backend.',
+      title: 'pass.in API',
+      description: 'API specifications for the pass.in API application backend.',
       version: '1.0.0',
       contact: {
         email: "cleilsonandrade@hotmail.com",
@@ -58,8 +58,11 @@ app.register(getEventAttendees)
 
 app.setErrorHandler(errorHandler)
 
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3333;
+
 app.listen({
-  port: process.env.PORT ? process.env.PORT : 3333, host: '0.0.0.0'
+  port,
+  host: '0.0.0.0'
 }).then(() => {
   console.log('Server running')
 })

@@ -1,7 +1,7 @@
 {
   "name": "pass.in-api",
   "version": "1.0.0",
-  "description": "pass.in-api is an application for managing participants in in-person events.",
+  "description": "pass.in API is an application for managing participants in in-person events.",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
