@@ -6,7 +6,6 @@
 # 📒 Índice
 * [Descrição](#descrição)
 * [Requisitos Funcionais](#requisitos)
-  * [Features](#features)
 * [Tecnologias](#tecnologias)
 * [Endpoints](#endpoints)
 * [Instalação](#instalação)
