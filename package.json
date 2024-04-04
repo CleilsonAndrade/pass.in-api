@@ -1,7 +1,7 @@
 {
   "name": "pass.in-api",
   "version": "1.0.0",
-  "description": "pass.in é uma aplicação de gestão de participantes em eventos presenciais.",
+  "description": "pass.in-api is an application for managing participants in in-person events.",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts"
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^3.0.0",
     "@prisma/client": "5.12.0",
     "fastify": "^4.26.2",
     "fastify-type-provider-zod": "^1.1.9",
