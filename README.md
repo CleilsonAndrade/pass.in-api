@@ -63,9 +63,6 @@ O pass.in API é uma aplicação de gestão de participantes em eventos presenci
 
   # Executar:
   $ yarn dev
-
-  # Executar cliente web do Prisma:
-  $ yarn db:studio
 ```
 
 # 📝 <span id="licença">Licença</span>
