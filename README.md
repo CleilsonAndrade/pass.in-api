@@ -1,6 +1,6 @@
 <div align="center">
   <h1>pass.in API</h1>
-  <p>O pass.in API é uma aplicação de gestão de participantes em eventos presenciais. A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição. Os participantes inscritos podem emitir uma credencial para check-in no dia do evento. O sistema fará um scan da credencial do participante para permitir a entrada no evento. Desenvolvida utilizando superset TypeScript da linguagem JavaScript, com as bibliotecas  Fastify, Prisma ORM e Zod.</p>
+  <p>O pass.in API é uma aplicação de gestão de participantes em eventos presenciais. A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição. Os participantes inscritos podem emitir uma credencial para check-in no dia do evento. O sistema fará um scan da credencial do participante para permitir a entrada.</p>
 </div>
 
 # 📒 Índice
