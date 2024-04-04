@@ -32,7 +32,7 @@ app.register(fastifySwagger, {
       },
       license: {
         name: "License",
-        url: "github.com"
+        url: "https://raw.githubusercontent.com/CleilsonAndrade/pass.in-api/main/LICENSE"
       }
     },
   },
