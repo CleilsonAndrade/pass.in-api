@@ -51,7 +51,7 @@ export async function getEvent(app: FastifyInstance) {
           throw new Error('Event not found')
         }
 
-        return response.send({
+        return response.status(200).send({
           event: {
             id: event.id,
             title: event.title,
