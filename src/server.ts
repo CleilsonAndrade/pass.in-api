@@ -8,7 +8,7 @@ import { checkIn } from "./routes/check-in";
 import { createEvent } from "./routes/create-event";
 import { getAttendeeBadge } from "./routes/get-attendee-badge";
 import { getEvent } from "./routes/get-event";
-import { getEventAttendees } from "./routes/get-event-atteendees";
+import { getEventAttendees } from "./routes/get-event-attendees";
 import { registerForEvent } from "./routes/register-for-event";
 
 export const app = fastify().withTypeProvider<ZodTypeProvider>();
