@@ -26,7 +26,7 @@ app.register(fastifySwagger, {
       description: 'API specifications for the pass.in API application backend.',
       version: '1.0.0',
       contact: {
-        email: "cleilsonandrade@hotmail.com",
+        email: "cleilsonjose@hotmail.com",
         name: "Cleilson Andrade",
         url: "https://www.linkedin.com/in/cleilson-andrade/"
       },
