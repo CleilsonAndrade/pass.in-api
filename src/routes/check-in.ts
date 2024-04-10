@@ -11,6 +11,7 @@ export async function checkIn(app: FastifyInstance) {
       {
         schema: {
           summary: "Check-in an attendee",
+          description: "Responsible for checking in a attendee at a specific event, informing the attendee ID via query param",
           tags: ['check-ins'],
           params: z.object({
             attendeeId: z.coerce.number().int()

@@ -12,6 +12,7 @@ export async function createEvent(app: FastifyInstance) {
       {
         schema: {
           summary: "Create an event",
+          description: "Responsible for creating the event, informing the title, description and maximum number of attendees",
           tags: ['events'],
           body: z.object({
             title: z.string().min(4),
