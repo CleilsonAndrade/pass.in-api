@@ -14,7 +14,7 @@ export async function checkIn(app: FastifyInstance) {
           description: "Responsible for checking in a attendee at a specific event, informing the attendee ID via query param",
           tags: ['check-ins'],
           params: z.object({
-            attendeeId: z.coerce.number().int().positive().describe("Attendee registration ID in UUID format")
+            attendeeId: z.coerce.number().int().positive().describe("Attendee registration ID in Integer format")
           }),
           response: {
             201: z.object({
