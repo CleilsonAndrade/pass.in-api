@@ -14,10 +14,12 @@ export async function checkIn(app: FastifyInstance) {
           description: "Responsible for checking in a attendee at a specific event, informing the attendee ID via query param",
           tags: ['check-ins'],
           params: z.object({
-            attendeeId: z.coerce.number().int()
+            attendeeId: z.coerce.number().int().positive().describe("Attendee registration ID in UUID format")
           }),
           response: {
-            201: z.null()
+            201: z.object({
+              checkInURL: z.string().url()
+            })
           }
         }
       },
@@ -40,7 +42,13 @@ export async function checkIn(app: FastifyInstance) {
           }
         })
 
-        return response.status(201).send()
+        const baseURL = `${request.protocol}://${request.hostname}`
+
+        const checkInURL = new URL(`/attendee/${attendeeId}/check-in`, baseURL)
+
+        return response.status(201).send({
+          checkInURL: checkInURL.toString()
+        })
       }
     )
 }

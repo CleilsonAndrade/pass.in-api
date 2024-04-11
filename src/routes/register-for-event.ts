@@ -18,7 +18,7 @@ export async function registerForEvent(app: FastifyInstance) {
             email: z.string().email()
           }),
           params: z.object({
-            eventId: z.string().uuid()
+            eventId: z.string().uuid().describe("Event registration ID in UUID format")
           }),
           response: {
             201: z.object({

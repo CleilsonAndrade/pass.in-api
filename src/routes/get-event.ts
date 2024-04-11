@@ -14,7 +14,7 @@ export async function getEvent(app: FastifyInstance) {
           description: "Responsible for displaying a specific event, informing eventId by query param",
           tags: ['events'],
           params: z.object({
-            eventId: z.string().uuid()
+            eventId: z.string().uuid().describe("Event registration ID in UUID format")
           }),
           response: {
             200: z.object({

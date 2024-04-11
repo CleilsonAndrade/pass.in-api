@@ -14,7 +14,7 @@ export async function getAttendeeBadge(app: FastifyInstance) {
           description: "Responsible for allowing a attendees registration badge to be viewed, informing the attendees ID via query param",
           tags: ['attendees'],
           params: z.object({
-            attendeeId: z.coerce.number().int().positive(),
+            attendeeId: z.coerce.number().int().positive().describe("Attendee registration ID in UUID format"),
           }),
           response: {
             200: z.object({

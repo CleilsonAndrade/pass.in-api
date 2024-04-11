@@ -13,11 +13,11 @@ export async function getEventAttendees(app: FastifyInstance) {
           description: "Responsible for listing the attendees of a specific event, informing the event ID by query param",
           tags: ['events'],
           params: z.object({
-            eventId: z.string().uuid()
+            eventId: z.string().uuid().describe("Event registration ID in UUID format")
           }),
           querystring: z.object({
-            query: z.string().nullish(),
-            pageIndex: z.string().nullable().default('0').transform(Number)
+            query: z.string().nullish().describe('Optional query string to filter attendees'),
+            pageIndex: z.string().nullable().default('0').transform(Number).describe('Index of the page to retrieve')
           }),
           response: {
             200: z.object({
