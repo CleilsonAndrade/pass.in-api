@@ -34,6 +34,7 @@ O pass.in API é uma aplicação de gestão de participantes em eventos presenci
 - **Prisma ORM**
 - **SQLite**
 - **Swagger**
+- **tsup**
 
 # 📍 <span id="endpoints">Endpoints</span>
 | Endpoint               | Resumo
@@ -63,6 +64,9 @@ O pass.in API é uma aplicação de gestão de participantes em eventos presenci
 
   # Executar:
   $ yarn dev
+
+  # Realizar build:
+  $ yarn build
 ```
 
 # 📝 <span id="licença">Licença</span>
