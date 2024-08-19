@@ -37,15 +37,15 @@ O pass.in API é uma aplicação de gestão de participantes em eventos presenci
 - **tsup**
 
 # 📍 <span id="endpoints">Endpoints</span>
-| Endpoint               | Resumo
-|----------------------|-----------------------------------------------------
-| <kbd>POST /events </kbd> | Responsável por criar o evento
-| <kbd>GET /events/:eventId </kbd> | Responsável por exibir um evento especifico, informando eventId por *query param*
-| <kbd>GET /events/:eventId/attendees </kbd> | Responsável por listar os participantes de um evento especifico, informando o ID do evento por *query param*
-| <kbd>POST /events/:eventId/attendees </kbd> | Responsável por inscrever um participante em um evento especifico, informando o ID do evento por *query param*
-| <kbd>GET /attendee/:attendeeId/check-in </kbd> | Responsável por realizar check-in de um participante em um evento especifico, informando o ID do participante por *query param*
-| <kbd>GET /attendees/:attendeeId/badge </kbd> | Responsável por permitir visualizar crachá de inscrição de um participante, informando o ID do participante por *query param*
-| <kbd>GET /docs </kbd> | Responsável por servir a documentação dos recursos da API
+| Método | Endpoint               | Resumo
+|--------|----------------------|-----------------------------------------------------
+<kbd>POST</kbd> | <kbd>/events</kbd> | Responsável por criar o evento
+<kbd>GET</kbd> | <kbd>/events/:eventId</kbd> | Responsável por exibir um evento especifico, informando eventId por *query param*
+<kbd>GET</kbd> | <kbd>/events/:eventId/attendees</kbd> | Responsável por listar os participantes de um evento especifico, informando o ID do evento por *query param*
+<kbd>POST</kbd> | <kbd>/events/:eventId/attendees</kbd> | Responsável por inscrever um participante em um evento especifico, informando o ID do evento por *query param*
+<kbd>GET</kbd> | <kbd>/attendee/:attendeeId/check-in</kbd> | Responsável por realizar check-in de um participante em um evento especifico, informando o ID do participante por *query param*
+<kbd>GET</kbd> | <kbd>/attendees/:attendeeId/badge</kbd> | Responsável por permitir visualizar crachá de inscrição de um participante, informando o ID do participante por *query param*
+<kbd>GET</kbd> | <kbd>/docs</kbd> | Responsável por servir a documentação dos recursos da API
 
 # 🚀 <span id="instalação">Instalação</span>
 ```bash
