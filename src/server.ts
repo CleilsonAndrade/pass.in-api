@@ -64,5 +64,5 @@ app.listen({
   port,
   host: '0.0.0.0'
 }).then(() => {
-  console.log('Server running')
+  console.log(`Server running: \nhttp://localhost:${port}`)
 })
