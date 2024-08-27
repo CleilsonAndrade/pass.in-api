@@ -18,7 +18,7 @@ O pass.in API é uma API Rest sendo uma aplicação de gestão de participantes 
 # 📌 <span id="requisitos">Requisitos Funcionais</span>
 - [x] O organizador deve poder cadastrar um novo evento<br>
 - [x] O organizador deve poder visualizar dados de um evento<br>
-- [x] O organizador deve poser visualizar a lista de participantes<br>
+- [x] O organizador deve poder visualizar a lista de participantes<br>
 - [x] O participante deve poder se inscrever em um evento<br>
 - [x] O participante deve poder visualizar seu crachá de inscrição<br>
 - [x] O participante deve poder realizar check-in no evento<br>
