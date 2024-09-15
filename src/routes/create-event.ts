@@ -1,56 +1,56 @@
-import { FastifyInstance } from "fastify";
-import { ZodTypeProvider } from "fastify-type-provider-zod";
-import z from "zod";
-import { prisma } from "../lib/prisma";
-import { generateSlug } from "../utils/generate-slug";
-import { BadRequest } from "./_errors/bad-request";
+import { prisma } from '@/lib/prisma'
+import { generateSlug } from '@/utils/generate-slug'
+import { FastifyInstance } from 'fastify'
+import { ZodTypeProvider } from 'fastify-type-provider-zod'
+import z from 'zod'
+import { BadRequest } from './_errors/bad-request'
 
 export async function createEvent(app: FastifyInstance) {
-  app
-    .withTypeProvider<ZodTypeProvider>()
-    .post('/events',
-      {
-        schema: {
-          summary: "Create an event",
-          description: "Responsible for creating the event, informing the title, description and maximum number of attendees",
-          tags: ['events'],
-          body: z.object({
-            title: z.string().min(4),
-            details: z.string().nullable(),
-            maximumAttendees: z.number().int().positive().nullable(),
-          }),
-          response: {
-            201: z.object({
-              eventId: z.string().uuid()
-            })
-          }
+  app.withTypeProvider<ZodTypeProvider>().post(
+    '/events',
+    {
+      schema: {
+        summary: 'Create an event',
+        description:
+          'Responsible for creating the event, informing the title, description and maximum number of attendees',
+        tags: ['events'],
+        body: z.object({
+          title: z.string().min(4),
+          details: z.string().nullable(),
+          maximumAttendees: z.number().int().positive().nullable()
+        }),
+        response: {
+          201: z.object({
+            eventId: z.string().uuid()
+          })
         }
-      },
-      async (request, response) => {
-        const { title, details, maximumAttendees } = request.body
+      }
+    },
+    async (request, response) => {
+      const { title, details, maximumAttendees } = request.body
 
-        const slug = generateSlug(title)
+      const slug = generateSlug(title)
 
-        const eventWithSameSlug = await prisma.event.findUnique({
-          where: {
-            slug,
-          }
-        })
-
-        if (eventWithSameSlug !== null) {
-          throw new BadRequest('Another event with same title already exists')
+      const eventWithSameSlug = await prisma.event.findUnique({
+        where: {
+          slug
         }
-
-        const event = await prisma.event.create({
-          data: {
-            title,
-            details,
-            maximumAttendees,
-            slug,
-          }
-        })
-
-        return response.status(201).send({ eventId: event.id })
       })
-}
 
+      if (eventWithSameSlug !== null) {
+        throw new BadRequest('Another event with same title already exists')
+      }
+
+      const event = await prisma.event.create({
+        data: {
+          title,
+          details,
+          maximumAttendees,
+          slug
+        }
+      })
+
+      return response.status(201).send({ eventId: event.id })
+    }
+  )
+}
